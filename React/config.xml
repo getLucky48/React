@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <sitetitle>ХДПП</sitetitle>
+  <solutionname>Xdpp</solutionname>
+  <solutionid>CD3AA508-952B-4AFA-B9F8-EB545390CEF8</solutionid>
+  <ip>127.0.0.1</ip>
+  <port1>1001</port1>
+	<host><![CDATA[/hdpp]]></host>  
+	<protectionkeystorage></protectionkeystorage>
+	<claimsidentity_name>Vipros.Web.XDPP</claimsidentity_name>
+  <hdpp_perv_version_connection>Data Source=10.0.0.17;Initial Catalog=ATR0901;User ID=vipros;Password=saxavat</hdpp_perv_version_connection>
+</root>

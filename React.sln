@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "React", "React\React.csproj", "{C1730B87-20F6-4E78-838E-5E592B9AAFFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "React", "React\React.csproj", "{C1730B87-20F6-4E78-838E-5E592B9AAFFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vipros.Kernel.Admin", "..\admin_web\Vipros.Kernel.Admin\Vipros.Kernel.Admin.csproj", "{6CCF86F3-458D-46DF-88DB-D85E52552BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vipros.Kernel.Exchange", "..\admin_web\Vipros.Kernel.Exchange\Vipros.Kernel.Exchange.csproj", "{036FEC25-1B51-4EDF-892D-12C994CE5896}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vipros.Kernel.Web.Core", "..\admin_web\Vipros.Kernel.Web.Core\Vipros.Kernel.Web.Core.csproj", "{84B38582-C8BD-4772-81E0-03C12167622E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{C1730B87-20F6-4E78-838E-5E592B9AAFFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1730B87-20F6-4E78-838E-5E592B9AAFFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1730B87-20F6-4E78-838E-5E592B9AAFFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCF86F3-458D-46DF-88DB-D85E52552BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCF86F3-458D-46DF-88DB-D85E52552BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCF86F3-458D-46DF-88DB-D85E52552BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCF86F3-458D-46DF-88DB-D85E52552BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036FEC25-1B51-4EDF-892D-12C994CE5896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036FEC25-1B51-4EDF-892D-12C994CE5896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036FEC25-1B51-4EDF-892D-12C994CE5896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036FEC25-1B51-4EDF-892D-12C994CE5896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B38582-C8BD-4772-81E0-03C12167622E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B38582-C8BD-4772-81E0-03C12167622E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B38582-C8BD-4772-81E0-03C12167622E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B38582-C8BD-4772-81E0-03C12167622E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

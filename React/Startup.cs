@@ -1,21 +1,41 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
+using System.IO;
+using Vipros.Kernel.Admin;
+using Vipros.Kernel.Exchange;
+using Web.Core.Data;
 
 namespace React
 {
     public class Startup
     {
+
+        static Guid sessionId = Guid.Empty;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
+
+        public static string GetSessionID()
+        {
+
+            if (sessionId == Guid.Empty) { sessionId = Guid.NewGuid(); }
+
+            return sessionId.ToString();
+
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -28,6 +48,7 @@ namespace React
             {
                 configuration.RootPath = "ClientApp/build";
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +64,7 @@ namespace React
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
@@ -66,6 +88,17 @@ namespace React
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+
+
+
+            KernelExchangeHelper.SetWCFIISClient();
+
+            KernelExchangeSession.Instance.CustomSessionIDCreator = new KernelExchangeSession.GetApplicationCustomSessionID(GetSessionID);
+
+            System_user_list.Login("admin", "admin");
+
+
+
         }
     }
 }
